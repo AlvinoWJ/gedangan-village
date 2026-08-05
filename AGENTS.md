@@ -125,7 +125,7 @@ pemerintahan modern.
   --radius-md: 0.75rem; /* rounded-xl */
   --radius-lg: 1rem; /* rounded-2xl */
 
-  --font-heading: var(--font-serif-heading); /* mis. Playfair Display / Lora */
+  --font-heading: var(--font-serif-heading); /* mis. Lora / Playfair Display */
   --font-sans: var(--font-body-sans); /* mis. Poppins / Plus Jakarta Sans */
 }
 ```
@@ -136,7 +136,7 @@ pemerintahan modern.
 
 | Fungsi                           | Font                                     |
 | -------------------------------- | ---------------------------------------- |
-| Heading (display, h1-h3)         | Serif — Playfair Display / Lora          |
+| Heading (display, h1-h3)         | Serif — Lora / Playfair Display          |
 | Body & UI (nav, paragraf, badge) | Sans-serif — Poppins / Plus Jakarta Sans |
 
 > Font final ditentukan dari file desain asli — pastikan lewat `next/font`.
