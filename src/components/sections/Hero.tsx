@@ -31,24 +31,31 @@ export function Hero() {
             Kecamatan Mojowarno, Kabupaten Jombang
           </span>
 
-          <h1 className="font-heading text-3xl leading-tight font-bold text-white drop-shadow-sm md:text-5xl lg:text-6xl">
-            Selamat Datang di Desa Gedangan
+          <h1 className="font-heading text-3xl leading-tight font-bold text-white drop-shadow-sm md:text-5xl lg:text-5xl">
+            Bersama Membangun Desa, Mengabdi dengan Hati.
           </h1>
 
-          <p className="max-w-md text-base leading-relaxed text-white/90 drop-shadow-sm md:text-lg">
-            Website resmi untuk warga, wisatawan, dan siapa pun yang ingin
-            mengenal lebih dekat potensi, program, dan kegiatan Desa Gedangan.
+          <p className="max-w-md text-base leading-relaxed text-white drop-shadow-sm md:text-lg">
+            Memberikan manfaat nyata bagi masyarakat Desa Gedangan melalui
+            pelayanan prima, pemberdayaan ekonomi, dan pengelolaan lingkungan
+            yang berkelanjutan.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/profil" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link
+              href="/profil"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "bg-primary text-white text-base p-6 hover:bg-primary/90 focus-visible:ring-1 focus-visible:ring-primary/70",
+              )}
+            >
               Kenali Desa Kami
             </Link>
             <Link
               href="/berita"
               className={cn(
-                buttonVariants({ size: "lg", variant: "outline" }),
-                "bg-white/90",
+                buttonVariants({ size: "lg" }),
+                "bg-accent text-white text-base p-6 hover:bg-accent/90 focus-visible:ring-1 focus-visible:ring-accent/70",
               )}
             >
               Lihat Berita Terbaru
