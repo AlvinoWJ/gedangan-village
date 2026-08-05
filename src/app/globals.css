@@ -16,6 +16,10 @@
   --color-warning: #f9a825;
   --color-danger: #d32f2f;
 
+  --border: #e2d9c8;
+  --input: #e2d9c8;
+  --ring: #6b9b37;
+
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
@@ -32,6 +36,11 @@
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
   --color-danger: var(--color-danger);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
   /* alias: pastikan utility `text-foreground` = warna teks warm village kita,
      bukan neutral bawaan shadcn */
   --color-foreground: var(--color-text-primary);
