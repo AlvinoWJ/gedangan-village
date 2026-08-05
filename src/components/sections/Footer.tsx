@@ -57,9 +57,9 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-footer"
+                    className="flex size-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-footer"
                   >
-                    <Icon className="size-4" />
+                    <Icon size={25} />
                   </a>
                 ))}
               </div>
@@ -88,9 +88,14 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-2 border-t border-white/20 pt-4 text-xs text-white/60 sm:flex-row">
           <p>
-            &copy; {year} {siteConfig.fullName}. Hak cipta dilindungi.
+            &copy; {year} {siteConfig.fullName}, Kecamatan Mojowarno. Hak cipta
+            dilindungi.
           </p>
-          <p>Dibuat dengan ❤️ untuk warga {siteConfig.name}.</p>
+          <div className="bg-primary rounded-2xl px-2.5 py-1.5">
+            <p className="text-xs font-semibold uppercase text-white">
+              kkn 4 upnvjt 2026
+            </p>
+          </div>
         </div>
       </Container>
     </footer>
