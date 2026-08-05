@@ -32,6 +32,9 @@
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
   --color-danger: var(--color-danger);
+  /* alias: pastikan utility `text-foreground` = warna teks warm village kita,
+     bukan neutral bawaan shadcn */
+  --color-foreground: var(--color-text-primary);
 
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
@@ -39,11 +42,6 @@
 
   --font-heading: var(--font-serif-heading);
   --font-sans: var(--font-body-sans);
-}
-
-body {
-  background: var(--color-background);
-  color: var(--color-text-primary);
 }
 
 @layer base {
