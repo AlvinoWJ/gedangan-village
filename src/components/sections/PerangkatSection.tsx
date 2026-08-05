@@ -33,7 +33,7 @@ export function PerangkatSection() {
                   </td>
                   <td className="px-6 py-3 text-text-secondary">{p.jabatan}</td>
                   <td className="px-6 py-3">
-                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
                       {p.pendidikan}
                     </span>
                   </td>
