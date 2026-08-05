@@ -4,12 +4,12 @@ export interface NavItem {
 }
 
 export const NAV_LINKS: NavItem[] = [
-  { label: "Beranda", href: "/" },
-  { label: "Profil", href: "/profil" },
-  { label: "Visi & Misi", href: "/visi-misi" },
-  { label: "Perangkat Desa", href: "/perangkat" },
-  { label: "Program", href: "/program" },
-  { label: "Berita", href: "/berita" },
+  { label: "Beranda", href: "#beranda" },
+  { label: "Profil", href: "#profil" },
+  { label: "Program", href: "#program" },
+  { label: "Visi & Misi", href: "#visi-misi" },
+  { label: "Perangkat Desa", href: "#perangkat" },
+  { label: "Berita", href: "#berita" },
   { label: "Galeri", href: "/galeri" },
-  { label: "Kontak", href: "/kontak" },
+  { label: "Kontak", href: "#kontak" },
 ];

@@ -5,7 +5,7 @@ import { programSection, programItems } from "@/lib/data/program";
 
 export function ProgramSection() {
   return (
-    <section className="bg-accent/10 py-12 md:py-20 lg:py-24">
+    <section id="program" className="bg-accent/10 py-12 md:py-20 lg:py-24">
       <Container className="space-y-10 md:space-y-14">
         <div className="mx-auto max-w-2xl space-y-3 text-center">
           <SectionBadge>{programSection.eyebrow}</SectionBadge>

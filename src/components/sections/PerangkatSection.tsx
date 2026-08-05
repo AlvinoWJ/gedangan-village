@@ -4,7 +4,7 @@ import { perangkatSection, perangkatDesa } from "@/lib/data/perangkat";
 
 export function PerangkatSection() {
   return (
-    <section className="bg-background py-12 md:py-20 lg:py-24">
+    <section id="perangkat" className="bg-background py-12 md:py-20 lg:py-24">
       <Container className="space-y-8 md:space-y-10">
         <h2 className="text-center font-heading text-xl font-semibold text-text-primary md:text-3xl">
           {perangkatSection.heading}

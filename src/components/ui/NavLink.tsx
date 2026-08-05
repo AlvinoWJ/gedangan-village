@@ -1,19 +1,20 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/lib/data/nav";
 
 interface NavLinkProps extends NavItem {
   className?: string;
+  isActive?: boolean;
   onNavigate?: () => void;
 }
 
-export function NavLink({ label, href, className, onNavigate }: NavLinkProps) {
-  const pathname = usePathname();
-  const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
-
+export function NavLink({
+  label,
+  href,
+  className,
+  isActive = false,
+  onNavigate,
+}: NavLinkProps) {
   return (
     <Link
       href={href}

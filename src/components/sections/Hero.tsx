@@ -19,7 +19,10 @@ const HeroParallax = dynamic(
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+    <section
+      id="beranda"
+      className="relative flex min-h-[85vh] items-center overflow-hidden"
+    >
       <HeroParallax />
 
       <Container className="relative py-24 md:py-32">

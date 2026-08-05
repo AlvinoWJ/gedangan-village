@@ -5,7 +5,7 @@ import { kontakSection, kontakItems } from "@/lib/data/kontak";
 
 export function ContactSection() {
   return (
-    <section className="bg-background py-12 md:py-20 lg:py-24">
+    <section id="kontak" className="bg-background py-12 md:py-20 lg:py-24">
       <Container className="space-y-10 md:space-y-14">
         <div className="mx-auto max-w-2xl space-y-3 text-center">
           <SectionBadge>{kontakSection.eyebrow}</SectionBadge>

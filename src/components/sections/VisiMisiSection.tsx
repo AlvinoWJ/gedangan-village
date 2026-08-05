@@ -4,7 +4,7 @@ import { visiMisiSection, visi, misiItems } from "@/lib/data/visi-misi";
 
 export function VisiMisiSection() {
   return (
-    <section className="bg-background py-12 md:py-20 lg:py-24">
+    <section id="visi-misi" className="bg-background py-12 md:py-20 lg:py-24">
       <Container className="space-y-10 md:space-y-14">
         <div className="mx-auto max-w-2xl space-y-3 text-center">
           <SectionBadge>{visiMisiSection.eyebrow}</SectionBadge>

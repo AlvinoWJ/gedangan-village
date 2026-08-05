@@ -6,7 +6,7 @@ import { beritaTerbaru, newsSectionMeta } from "@/lib/data/berita-dummy";
 
 export function NewsSection() {
   return (
-    <section className="bg-accent/10 py-12 md:py-20 lg:py-24">
+    <section id="berita" className="bg-accent/10 py-12 md:py-20 lg:py-24">
       <Container className="space-y-8 md:space-y-10">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">

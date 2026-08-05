@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
+import { useActiveSection } from "@/hooks/useActiveSection";
 import type { NavItem } from "@/lib/data/nav";
 
 interface MobileNavMenuProps {
@@ -13,6 +14,11 @@ interface MobileNavMenuProps {
 
 export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
   const [open, setOpen] = useState(false);
+
+  const sectionIds = navLinks
+    .filter((item) => item.href.startsWith("#"))
+    .map((item) => item.href.slice(1));
+  const activeId = useActiveSection(sectionIds);
 
   return (
     <div className="md:hidden">
@@ -41,6 +47,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
                 <li key={item.href}>
                   <NavLink
                     {...item}
+                    isActive={item.href === `#${activeId}`}
                     onNavigate={() => setOpen(false)}
                     className="block py-2.5 text-base"
                   />
