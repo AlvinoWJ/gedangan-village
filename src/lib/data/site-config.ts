@@ -3,7 +3,7 @@ export const siteConfig = {
   fullName: "Pemerintah Desa Gedangan",
   district: "Kecamatan Mojowarno",
   description:
-    "Website Resmi Desa Gedangan, Kecamatan Mojowarno, Kabupaten Jombang, Jawa Timur",
+    "Website resmi Pemerintah Desa Gedangan. Melayani dengan tulus, membangun dengan semangat gotong royong untuk Desa Gedangan yang maju dan sejahtera.",
   address: "Jl. Raya Gedangan, Kec. Mojowarno, Kab. Jombang, Jawa Timur 61476",
   phone: "+62 812-3456-7890",
   email: "desagedangan@jombangkab.go.id",

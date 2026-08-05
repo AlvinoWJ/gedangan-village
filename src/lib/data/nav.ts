@@ -10,6 +10,5 @@ export const NAV_LINKS: NavItem[] = [
   { label: "Perangkat Desa", href: "/perangkat" },
   { label: "Program", href: "/program" },
   { label: "Berita", href: "/berita" },
-  { label: "Galeri", href: "/galeri" },
   { label: "Kontak", href: "/kontak" },
 ];

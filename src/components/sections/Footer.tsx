@@ -1,5 +1,6 @@
+// src/components/sections/Footer.tsx
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/common/Container";
 import { siteConfig } from "@/lib/data/site-config";
 import { NAV_LINKS } from "@/lib/data/nav";
@@ -22,90 +23,76 @@ export function Footer() {
 
   return (
     <footer className="bg-footer text-white">
-      <Container className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 md:py-20 lg:grid-cols-4">
-        <div className="space-y-3">
-          <h3 className="font-heading text-lg font-semibold text-white">
-            {siteConfig.name}
-          </h3>
-          <p className="max-w-xs text-sm leading-relaxed text-white/70">
-            {siteConfig.description}
-          </p>
-        </div>
+      <Container className="flex flex-col gap-10 py-12 md:py-20">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-10">
+          <Image
+            src="/logo/logo-jombang.png"
+            alt="Logo Kabupaten Jombang"
+            width={200}
+            height={200}
+            className="size-28 shrink-0 self-center object-contain sm:size-32 sm:-ml-4 sm:self-start md:size-46 md:-ml-6 lg:size-52 lg:-ml-8"
+          />
 
-        <div className="space-y-3">
-          <h4 className="text-sm font-semibold tracking-wide text-white/90 uppercase">
-            Tautan Cepat
-          </h4>
-          <ul className="space-y-2">
-            {NAV_LINKS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-white/70 transition-colors hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div className="grid flex-1 grid-cols-1 gap-20 sm:grid-cols-2">
+            {/* Profil */}
+            <div className="space-y-3">
+              <div>
+                <h3 className="font-heading text-2xl font-bold text-white">
+                  {siteConfig.name}
+                </h3>
+                <p className="text-lg text-white/70">
+                  {siteConfig.district}, Jombang
+                </p>
+              </div>
 
-        <div className="space-y-3">
-          <h4 className="text-sm font-semibold tracking-wide text-white/90 uppercase">
-            Kontak
-          </h4>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li className="flex gap-2">
-              <MapPin className="size-4 shrink-0 text-accent" aria-hidden />
-              <span>{siteConfig.address}</span>
-            </li>
-            <li className="flex gap-2">
-              <Phone className="size-4 shrink-0 text-accent" aria-hidden />
-              <a href={`tel:${siteConfig.phone}`} className="hover:text-accent">
-                {siteConfig.phone}
-              </a>
-            </li>
-            <li className="flex gap-2">
-              <Mail className="size-4 shrink-0 text-accent" aria-hidden />
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="hover:text-accent"
-              >
-                {siteConfig.email}
-              </a>
-            </li>
-          </ul>
-        </div>
+              <p className="max-w-xs text-sm leading-relaxed text-white/70">
+                {siteConfig.description}
+              </p>
 
-        <div className="space-y-3">
-          <h4 className="text-sm font-semibold tracking-wide text-white/90 uppercase">
-            Ikuti Kami
-          </h4>
-          <div className="flex gap-3">
-            {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-footer"
-              >
-                <Icon className="size-4" />
-              </a>
-            ))}
+              <div className="flex gap-3">
+                {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-footer"
+                  >
+                    <Icon className="size-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigasi */}
+            <div className="space-y-3">
+              <h4 className="font-heading text-xl font-semibold tracking-wide text-white/90 ">
+                Navigasi
+              </h4>
+              <ul className="space-y-2">
+                {NAV_LINKS.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-white/70 transition-colors hover:text-accent"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </Container>
 
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-2 py-4 text-xs text-white/60 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-2 border-t border-white/20 pt-4 text-xs text-white/60 sm:flex-row">
           <p>
             &copy; {year} {siteConfig.fullName}. Hak cipta dilindungi.
           </p>
           <p>Dibuat dengan ❤️ untuk warga {siteConfig.name}.</p>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </footer>
   );
 }
