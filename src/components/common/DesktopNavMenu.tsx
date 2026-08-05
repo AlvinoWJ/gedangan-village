@@ -1,19 +1,20 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/ui/NavLink";
-import { useActiveSection } from "@/hooks/useActiveSection";
 import type { NavItem } from "@/lib/data/nav";
 
 interface DesktopNavMenuProps {
   navLinks: NavItem[];
 }
 
-export function DesktopNavMenu({ navLinks }: DesktopNavMenuProps) {
-  const sectionIds = navLinks
-    .filter((item) => item.href.startsWith("#"))
-    .map((item) => item.href.slice(1));
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
-  const activeId = useActiveSection(sectionIds);
+export function DesktopNavMenu({ navLinks }: DesktopNavMenuProps) {
+  const pathname = usePathname();
 
   return (
     <nav
@@ -24,7 +25,7 @@ export function DesktopNavMenu({ navLinks }: DesktopNavMenuProps) {
         <NavLink
           key={item.href}
           {...item}
-          isActive={item.href === `#${activeId}`}
+          isActive={isActivePath(pathname, item.href)}
         />
       ))}
     </nav>

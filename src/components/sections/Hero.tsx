@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="beranda"
-      className="relative flex min-h-[85vh] items-center overflow-hidden"
+      className="relative flex min-h-[calc(100dvh-4rem)] md:min-h-[calc(100dvh-5rem)] items-center overflow-hidden"
     >
       <HeroParallax />
 

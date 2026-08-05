@@ -1,24 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
-import { useActiveSection } from "@/hooks/useActiveSection";
 import type { NavItem } from "@/lib/data/nav";
 
 interface MobileNavMenuProps {
   navLinks: NavItem[];
 }
 
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
-  const sectionIds = navLinks
-    .filter((item) => item.href.startsWith("#"))
-    .map((item) => item.href.slice(1));
-  const activeId = useActiveSection(sectionIds);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <div className="md:hidden">
@@ -47,8 +52,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
                 <li key={item.href}>
                   <NavLink
                     {...item}
-                    isActive={item.href === `#${activeId}`}
-                    onNavigate={() => setOpen(false)}
+                    isActive={isActivePath(pathname, item.href)}
                     className="block py-2.5 text-base"
                   />
                 </li>
