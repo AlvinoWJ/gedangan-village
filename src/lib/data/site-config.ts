@@ -6,6 +6,7 @@ export const siteConfig = {
   address: "Jl. Raya Gedangan, Kec. Mojowarno, Kab. Jombang, Jawa Timur 61476",
   phone: "+62 812-3456-7890",
   email: "desagedangan@jombangkab.go.id",
+  operationalHours: "Senin – Jumat, 08.00 – 15.00 WIB",
   social: {
     facebook: "https://facebook.com/desagedangan",
     instagram: "https://instagram.com/desagedangan",
